@@ -89,8 +89,16 @@ pip install -r requirements.txt
    - [openai-python/chatml.md at release-v0.28.0 · openai/openai-python](https://github.com/openai/openai-python/blob/release-v0.28.0/chatml.md) (ChatML template format)
    - [Chat Templates](https://huggingface.co/docs/transformers/en/chat_templating#how-do-i-use-chat-templates) (`chat_template` is usually in the model's tokenizer)
    - [🤗 Transformers](https://huggingface.co/docs/transformers/index)
-6. [ ] [What are Tools?](https://huggingface.co/learn/agents-course/en/unit1/tools)
-7. [ ] [Quick Self-Check (ungraded)](https://huggingface.co/learn/agents-course/en/unit1/quiz2) (Quick Quiz 2)
+6. [X] [What are Tools?](https://huggingface.co/learn/agents-course/en/unit1/tools)
+   - A Tool should contain:
+     - A **textual description of what the function does**.
+     - A _Callable_ (something to perform an action).
+     - _Arguments_ with typings.
+     - (Optional) Outputs with typings.
+   - The tool description is injected in the system prompt.
+     - What the tool does
+     - What exact inputs it expects
+7. [X] [Quick Self-Check (ungraded)](https://huggingface.co/learn/agents-course/en/unit1/quiz2) (Quick Quiz 2)
 8. [ ] [Understanding AI Agents through the Thought-Action-Observation Cycle](https://huggingface.co/learn/agents-course/en/unit1/agent-steps-and-structure)
 9.  [ ] [Thought: Internal Reasoning and the Re-Act Approach](https://huggingface.co/learn/agents-course/en/unit1/thoughts)
 10. [ ] [Actions: Enabling the Agent to Engage with Its Environment](https://huggingface.co/learn/agents-course/en/unit1/actions)
