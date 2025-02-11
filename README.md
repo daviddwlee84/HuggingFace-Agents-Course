@@ -17,6 +17,17 @@ Authors
 - Ben Burtenshaw
 - Thomas Simonini
 
+## Getting Started
+
+```bash
+# https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
+python -m venv .venv
+source .venv/bin/activate
+
+# https://huggingface.co/docs/transformers/installation
+pip install -r requirements.txt
+```
+
 ## Schedule
 
 ![recommended-pace](https://huggingface.co/datasets/agents-course/course-images/resolve/main/en/unit0/recommended-pace.jpg)
@@ -72,8 +83,12 @@ Authors
       - Reason and plan: Analyze information, make decisions, and devise strategies to solve problems.
       - Interact with its environment: Gather information, take actions, and observe the results of those actions.
 3. [X] [Small Quiz (ungraded)](https://huggingface.co/learn/agents-course/en/unit1/quiz1) (Quick Quiz 1)
-4. [ ] [What are LLMs?](https://huggingface.co/learn/agents-course/en/unit1/what-are-llms)
-5. [ ] [Messages and Special Tokens](https://huggingface.co/learn/agents-course/en/unit1/messages-and-special-tokens)
+4. [X] [What are LLMs?](https://huggingface.co/learn/agents-course/en/unit1/what-are-llms)
+   - [tokenizer_config.json · HuggingFaceTB/SmolLM2-135M-Instruct at main](https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/blob/main/tokenizer_config.json)
+5. [X] [Messages and Special Tokens](https://huggingface.co/learn/agents-course/en/unit1/messages-and-special-tokens)
+   - [openai-python/chatml.md at release-v0.28.0 · openai/openai-python](https://github.com/openai/openai-python/blob/release-v0.28.0/chatml.md) (ChatML template format)
+   - [Chat Templates](https://huggingface.co/docs/transformers/en/chat_templating#how-do-i-use-chat-templates) (`chat_template` is usually in the model's tokenizer)
+   - [🤗 Transformers](https://huggingface.co/docs/transformers/index)
 6. [ ] [What are Tools?](https://huggingface.co/learn/agents-course/en/unit1/tools)
 7. [ ] [Quick Self-Check (ungraded)](https://huggingface.co/learn/agents-course/en/unit1/quiz2) (Quick Quiz 2)
 8. [ ] [Understanding AI Agents through the Thought-Action-Observation Cycle](https://huggingface.co/learn/agents-course/en/unit1/agent-steps-and-structure)

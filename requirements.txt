@@ -1,0 +1,11 @@
+transformers[torch]
+
+# development
+black
+ipdb
+ipython
+ipykernel
+# https://ipywidgets.readthedocs.io/en/stable/user_install.html
+ipywidgets
+jupyterlab
+notebook
