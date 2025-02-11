@@ -1,4 +1,6 @@
 transformers[torch]
+huggingface_hub
+python-dotenv
 
 # development
 black

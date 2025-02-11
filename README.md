@@ -26,6 +26,10 @@ source .venv/bin/activate
 
 # https://huggingface.co/docs/transformers/installation
 pip install -r requirements.txt
+
+cp .env.example .env
+# Setup Hugging Face API key
+# https://hf.co/settings/tokens
 ```
 
 ## Schedule
@@ -129,6 +133,8 @@ pip install -r requirements.txt
      3. Append the result as an Observation.
 12. [ ] [Dummy Agent Library](https://huggingface.co/learn/agents-course/en/unit1/dummy-agent-library)
    - [dummy_agent_library.ipynb · agents-course/notebooks at main](https://huggingface.co/agents-course/notebooks/blob/main/dummy_agent_library.ipynb)
+   - The `chat` method is the RECOMMENDED method to use in order to ensure a smooth transition between models
+   - If use `text_generation` method, we need to provide prompt (e.g. special tokens for the specific model) properly
 13. [ ] [Let’s Create Our First Agent Using smolagents](https://huggingface.co/learn/agents-course/en/unit1/tutorial)
 14. [ ] [**Unit 1 Quiz**](https://huggingface.co/learn/agents-course/en/unit1/final-quiz)
 15. [ ] [Get your certificate](https://huggingface.co/learn/agents-course/en/unit1/get-your-certificate)
