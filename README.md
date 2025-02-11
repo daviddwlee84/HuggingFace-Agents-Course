@@ -99,11 +99,36 @@ pip install -r requirements.txt
      - What the tool does
      - What exact inputs it expects
 7. [X] [Quick Self-Check (ungraded)](https://huggingface.co/learn/agents-course/en/unit1/quiz2) (Quick Quiz 2)
-8. [ ] [Understanding AI Agents through the Thought-Action-Observation Cycle](https://huggingface.co/learn/agents-course/en/unit1/agent-steps-and-structure)
-9.  [ ] [Thought: Internal Reasoning and the Re-Act Approach](https://huggingface.co/learn/agents-course/en/unit1/thoughts)
-10. [ ] [Actions: Enabling the Agent to Engage with Its Environment](https://huggingface.co/learn/agents-course/en/unit1/actions)
-11. [ ] [Observe: Integrating Feedback to Reflect and Adapt](https://huggingface.co/learn/agents-course/en/unit1/observations)
+8. [X] [Understanding AI Agents through the Thought-Action-Observation Cycle](https://huggingface.co/learn/agents-course/en/unit1/agent-steps-and-structure)
+   - Agents work in a continuous cycle of: **thinking (Thought) → acting (Act) and observing (Observe)**.
+     1. **Thought**: The LLM part of the Agent decides what the next step should be.
+     2. **Action:** The agent takes an action, by calling the tools with the associated arguments.
+     3. **Observation:** The model reflects on the response from the tool.
+9. [X] [Thought: Internal Reasoning and the Re-Act Approach](https://huggingface.co/learn/agents-course/en/unit1/thoughts)
+   - [ReAct](https://arxiv.org/abs/2210.03629) ([papers.cool](https://papers.cool/arxiv/2210.03629)): “Reasoning” (Think) with “Acting” (Act)
+     - ReAct is a simple prompting technique that appends “Let’s think step by step” before letting the LLM decode the next tokens.
+     - We have recently seen a lot of interest for reasoning strategies. This is what's behind models like Deepseek R1 or OpenAI's o1, which have been fine-tuned to "think before answering".
+10. [X] [Actions: Enabling the Agent to Engage with Its Environment](https://huggingface.co/learn/agents-course/en/unit1/actions)
+   - One key method for implementing actions is the **Stop and Parse Approach**. This method ensures that the agent’s output is structured and predictable:
+     1. Generation in a Structured Format: The agent outputs its intended action in a clear, predetermined format (JSON or code).
+     2. Halting Further Generation: Once the action is complete, the agent stops generating additional tokens. This prevents extra or erroneous output.
+     3. Parsing the Output: An external parser reads the formatted action, determines which Tool to call, and extracts the required parameters.
+   - An alternative approach is using **Code Agents**. The idea is: instead of outputting a simple JSON object, a Code Agent generates an executable code block—typically in a high-level language like Python.
+     - Expressiveness: Code can naturally represent complex logic, including loops, conditionals, and nested functions, providing greater flexibility than JSON.
+     - Modularity and Reusability: Generated code can include functions and modules that are reusable across different actions or tasks.
+     - Enhanced Debuggability: With a well-defined programming syntax, code errors are often easier to detect and correct.
+     - Direct Integration: Code Agents can integrate directly with external libraries and APIs, enabling more complex operations such as data processing or real-time decision making.
+11. [X] [Observe: Integrating Feedback to Reflect and Adapt](https://huggingface.co/learn/agents-course/en/unit1/observations)
+   - Observations are how an Agent perceives the consequences of its actions.
+     - Collects Feedback: Receives data or confirmation that its action was successful (or not).
+     - Appends Results: Integrates the new information into its existing context, effectively updating its memory.
+     - Adapts its Strategy: Uses this updated context to refine subsequent thoughts and actions.
+   - After performing an action, the framework follows these steps in order:
+     1. Parse the action to identify the function(s) to call and the argument(s) to use.
+     2. Execute the action.
+     3. Append the result as an Observation.
 12. [ ] [Dummy Agent Library](https://huggingface.co/learn/agents-course/en/unit1/dummy-agent-library)
+   - [dummy_agent_library.ipynb · agents-course/notebooks at main](https://huggingface.co/agents-course/notebooks/blob/main/dummy_agent_library.ipynb)
 13. [ ] [Let’s Create Our First Agent Using smolagents](https://huggingface.co/learn/agents-course/en/unit1/tutorial)
 14. [ ] [**Unit 1 Quiz**](https://huggingface.co/learn/agents-course/en/unit1/final-quiz)
 15. [ ] [Get your certificate](https://huggingface.co/learn/agents-course/en/unit1/get-your-certificate)
