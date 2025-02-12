@@ -24,6 +24,9 @@ Authors
 brew install git-lfs
 # For Hugging Face repository/space, now as submodules of this repository
 git lfs install
+# Login with token (to push code back to Hugging Face repository)
+# https://discuss.huggingface.co/t/cant-push-to-new-space/35319/4
+huggingface-cli login
 
 # https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
 python -m venv .venv
@@ -31,6 +34,7 @@ source .venv/bin/activate
 
 # https://huggingface.co/docs/transformers/installation
 pip install -r requirements.txt
+pip install -r spaces/Unit_1-First_Agent/requirements.txt
 
 cp .env.example .env
 # Setup Hugging Face API key
