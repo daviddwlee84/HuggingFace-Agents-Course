@@ -20,6 +20,11 @@ Authors
 ## Getting Started
 
 ```bash
+# Make sure you have git-lfs installed (https://git-lfs.com)
+brew install git-lfs
+# For Hugging Face repository/space, now as submodules of this repository
+git lfs install
+
 # https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
 python -m venv .venv
 source .venv/bin/activate
@@ -136,6 +141,11 @@ cp .env.example .env
    - The `chat` method is the RECOMMENDED method to use in order to ensure a smooth transition between models
    - If use `text_generation` method, we need to provide prompt (e.g. special tokens for the specific model) properly
 13. [ ] [Let’s Create Our First Agent Using smolagents](https://huggingface.co/learn/agents-course/en/unit1/tutorial)
+    - smolagents is a library that focuses on codeAgent, a kind of agent that performs “Actions” through code blocks, and then “Observes” results by executing the code.
+    - [Introducing smolagents: simple agents that write actions in code.](https://huggingface.co/blog/smolagents)
+    - [Agent process - YouTube](https://www.youtube.com/watch?v=PQDKcWiuln4)
+    - Duplicate this space: [First Agent Template - a Hugging Face Space by agents-course](https://huggingface.co/spaces/agents-course/First_agent_template)
+      - Modify this incomplete code: [app.py · agents-course/First_agent_template at main](https://huggingface.co/spaces/agents-course/First_agent_template/blob/main/app.py)
 14. [ ] [**Unit 1 Quiz**](https://huggingface.co/learn/agents-course/en/unit1/final-quiz)
 15. [ ] [Get your certificate](https://huggingface.co/learn/agents-course/en/unit1/get-your-certificate)
 16. [ ] [Conclusion](https://huggingface.co/learn/agents-course/en/unit1/conclusion)
