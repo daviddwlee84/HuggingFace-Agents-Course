@@ -131,8 +131,8 @@ cp .env.example .env
      1. Parse the action to identify the function(s) to call and the argument(s) to use.
      2. Execute the action.
      3. Append the result as an Observation.
-12. [ ] [Dummy Agent Library](https://huggingface.co/learn/agents-course/en/unit1/dummy-agent-library)
-   - [dummy_agent_library.ipynb · agents-course/notebooks at main](https://huggingface.co/agents-course/notebooks/blob/main/dummy_agent_library.ipynb)
+12. [ ] [Dummy Agent Library](https://huggingface.co/learn/agents-course/en/unit1/dummy-agent-library) (TODO: solve the hallucination issue)
+   - [dummy_agent_library.ipynb · agents-course/notebooks at main](https://huggingface.co/agents-course/notebooks/blob/main/dummy_agent_library.ipynb) ([open in Google Colab](https://colab.research.google.com/#fileId=https://huggingface.co/agents-course/notebooks/blob/main/dummy_agent_library.ipynb)) => [Modified Version](https://colab.research.google.com/drive/1SzN6jyQpldIXF-eNPP1_vnKv4ivLJRG7?usp=sharing)
    - The `chat` method is the RECOMMENDED method to use in order to ensure a smooth transition between models
    - If use `text_generation` method, we need to provide prompt (e.g. special tokens for the specific model) properly
 13. [ ] [Let’s Create Our First Agent Using smolagents](https://huggingface.co/learn/agents-course/en/unit1/tutorial)
