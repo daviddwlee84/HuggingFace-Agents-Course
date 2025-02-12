@@ -125,29 +125,29 @@ cp .env.example .env
      - ReAct is a simple prompting technique that appends “Let’s think step by step” before letting the LLM decode the next tokens.
      - We have recently seen a lot of interest for reasoning strategies. This is what's behind models like Deepseek R1 or OpenAI's o1, which have been fine-tuned to "think before answering".
 10. [X] [Actions: Enabling the Agent to Engage with Its Environment](https://huggingface.co/learn/agents-course/en/unit1/actions)
-   - One key method for implementing actions is the **Stop and Parse Approach**. This method ensures that the agent’s output is structured and predictable:
-     1. Generation in a Structured Format: The agent outputs its intended action in a clear, predetermined format (JSON or code).
-     2. Halting Further Generation: Once the action is complete, the agent stops generating additional tokens. This prevents extra or erroneous output.
-     3. Parsing the Output: An external parser reads the formatted action, determines which Tool to call, and extracts the required parameters.
-   - An alternative approach is using **Code Agents**. The idea is: instead of outputting a simple JSON object, a Code Agent generates an executable code block—typically in a high-level language like Python.
-     - Expressiveness: Code can naturally represent complex logic, including loops, conditionals, and nested functions, providing greater flexibility than JSON.
-     - Modularity and Reusability: Generated code can include functions and modules that are reusable across different actions or tasks.
-     - Enhanced Debuggability: With a well-defined programming syntax, code errors are often easier to detect and correct.
-     - Direct Integration: Code Agents can integrate directly with external libraries and APIs, enabling more complex operations such as data processing or real-time decision making.
+    - One key method for implementing actions is the **Stop and Parse Approach**. This method ensures that the agent’s output is structured and predictable:
+      1. Generation in a Structured Format: The agent outputs its intended action in a clear, predetermined format (JSON or code).
+      2. Halting Further Generation: Once the action is complete, the agent stops generating additional tokens. This prevents extra or erroneous output.
+      3. Parsing the Output: An external parser reads the formatted action, determines which Tool to call, and extracts the required parameters.
+    - An alternative approach is using **Code Agents**. The idea is: instead of outputting a simple JSON object, a Code Agent generates an executable code block—typically in a high-level language like Python.
+      - Expressiveness: Code can naturally represent complex logic, including loops, conditionals, and nested functions, providing greater flexibility than JSON.
+      - Modularity and Reusability: Generated code can include functions and modules that are reusable across different actions or tasks.
+      - Enhanced Debuggability: With a well-defined programming syntax, code errors are often easier to detect and correct.
+      - Direct Integration: Code Agents can integrate directly with external libraries and APIs, enabling more complex operations such as data processing or real-time decision making.
 11. [X] [Observe: Integrating Feedback to Reflect and Adapt](https://huggingface.co/learn/agents-course/en/unit1/observations)
-   - Observations are how an Agent perceives the consequences of its actions.
-     - Collects Feedback: Receives data or confirmation that its action was successful (or not).
-     - Appends Results: Integrates the new information into its existing context, effectively updating its memory.
-     - Adapts its Strategy: Uses this updated context to refine subsequent thoughts and actions.
-   - After performing an action, the framework follows these steps in order:
-     1. Parse the action to identify the function(s) to call and the argument(s) to use.
-     2. Execute the action.
-     3. Append the result as an Observation.
-12. [X] [Dummy Agent Library](https://huggingface.co/learn/agents-course/en/unit1/dummy-agent-library) (TODO: solve the hallucination issue => OpenAI model works fine)
-   - [dummy_agent_library.ipynb · agents-course/notebooks at main](https://huggingface.co/agents-course/notebooks/blob/main/dummy_agent_library.ipynb) ([open in Google Colab](https://colab.research.google.com/#fileId=https://huggingface.co/agents-course/notebooks/blob/main/dummy_agent_library.ipynb)) => [Modified Version](https://colab.research.google.com/drive/1SzN6jyQpldIXF-eNPP1_vnKv4ivLJRG7?usp=sharing)
-   - The `chat` method is the RECOMMENDED method to use in order to ensure a smooth transition between models
-   - If use `text_generation` method, we need to provide prompt (e.g. special tokens for the specific model) properly
-13. [X] [Let’s Create Our First Agent Using smolagents](https://huggingface.co/learn/agents-course/en/unit1/tutorial) (TODO: failed to use course HfApiModel API endpoint => Currently use OpenAI model)
+    - Observations are how an Agent perceives the consequences of its actions.
+      - Collects Feedback: Receives data or confirmation that its action was successful (or not).
+      - Appends Results: Integrates the new information into its existing context, effectively updating its memory.
+      - Adapts its Strategy: Uses this updated context to refine subsequent thoughts and actions.
+    - After performing an action, the framework follows these steps in order:
+      1. Parse the action to identify the function(s) to call and the argument(s) to use.
+      2. Execute the action.
+      3. Append the result as an Observation.
+12. [X] [Dummy Agent Library](https://huggingface.co/learn/agents-course/en/unit1/dummy-agent-library) (the hallucination issue => OpenAI model & slightly bigger model works)
+    - [dummy_agent_library.ipynb · agents-course/notebooks at main](https://huggingface.co/agents-course/notebooks/blob/main/dummy_agent_library.ipynb) ([open in Google Colab](https://colab.research.google.com/#fileId=https://huggingface.co/agents-course/notebooks/blob/main/dummy_agent_library.ipynb)) => [Modified Version](https://colab.research.google.com/drive/1SzN6jyQpldIXF-eNPP1_vnKv4ivLJRG7?usp=sharing)
+    - The `chat` method is the RECOMMENDED method to use in order to ensure a smooth transition between models
+    - If use `text_generation` method, we need to provide prompt (e.g. special tokens for the specific model) properly
+13. [X] [Let’s Create Our First Agent Using smolagents](https://huggingface.co/learn/agents-course/en/unit1/tutorial) (failed to use [course HfApiModel API endpoint](https://discord.com/channels/879548962464493619/1336751588391391283/1338901490651103414) => Currently use OpenAI model (local model might be too weak) or the slight bigger one same as the Dummy Agent part)
     - smolagents is a library that focuses on codeAgent, a kind of agent that performs “Actions” through code blocks, and then “Observes” results by executing the code.
     - [Introducing smolagents: simple agents that write actions in code.](https://huggingface.co/blog/smolagents)
     - [Agent process - YouTube](https://www.youtube.com/watch?v=PQDKcWiuln4)
@@ -178,7 +178,23 @@ cp .env.example .env
 
 ## Resources
 
+Packages
+
 - `smolagents`
   - [Smolagents : Huggingface AI Agent Framework](https://smolagents.org/)
   - [huggingface/smolagents: 🤗 smolagents: a barebones library for agents. Agents write python code to call tools and orchestrate other agents.](https://github.com/huggingface/smolagents)
   - [smolagents](https://huggingface.co/docs/smolagents/index)
+
+Videos
+
+- [Deep Dive into LLMs like ChatGPT - YouTube](https://www.youtube.com/watch?v=7xTGNNLPyMI)
+  - [FineWeb: decanting the web for the finest text data at scale - a Hugging Face Space by HuggingFaceFW](https://huggingface.co/spaces/HuggingFaceFW/blogpost-fineweb-v1)
+    - [HuggingFaceFW/fineweb · Datasets at Hugging Face](https://huggingface.co/datasets/HuggingFaceFW/fineweb)
+  - [Byte-Pair Encoding tokenization - Hugging Face NLP Course](https://huggingface.co/learn/nlp-course/chapter6/5)
+    - [Byte Pair Encoding Tokenization - YouTube](https://www.youtube.com/watch?v=HEikzVL-lZU)
+  - [Tiktokenizer](https://tiktokenizer.vercel.app/) ([dqbd/tiktokenizer: Online playground for OpenAPI tokenizers](https://github.com/dqbd/tiktokenizer))
+
+Courses
+
+- [Hugging Face - Learn](https://huggingface.co/learn)
+  - [Hugging Face NLP Course](https://huggingface.co/learn/nlp-course)
