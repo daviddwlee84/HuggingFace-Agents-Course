@@ -45,13 +45,13 @@ cp .env.example .env
 
 ![recommended-pace](https://huggingface.co/datasets/agents-course/course-images/resolve/main/en/unit0/recommended-pace.jpg)
 
-| Week           | Unit | Topic                                                                                      | Lectures | Quiz                                                                          | Assignments |
-| -------------- | ---- | ------------------------------------------------------------------------------------------ | -------- | ----------------------------------------------------------------------------- | ----------- |
-| 2025/2/10~2/16 | 0    | [Welcome to the Course](https://huggingface.co/learn/agents-course/en/unit0/introduction)  | -        | -                                                                             | -           |
-| 2025/2/17~2/23 | 1    | [Introduction to Agents](https://huggingface.co/learn/agents-course/en/unit1/introduction) | -        | [Unit 1 Quiz](https://huggingface.co/learn/agents-course/en/unit1/final-quiz) | -           |
-| 2025/2/24~3/9  | 2    | [2_frameworks](units/en/unit2/README.md)                                                   | -        | -                                                                             | -           |
-| 2025/3/10~3/31 | 3    | [3_use_cases](units/en/unit3/README.md)                                                    | -        | -                                                                             | -           |
-| 2025/4/1~4/30  | 4    | [4_final_assignment_with_benchmark](units/en/unit4/README.md)                              | -        | -                                                                             | -           |
+| Week           | Unit | Topic                                                                                      | Lectures | Quiz                                                                          | Assignments                              | Others                                                                                                                                                                                      |
+| -------------- | ---- | ------------------------------------------------------------------------------------------ | -------- | ----------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2025/2/10~2/16 | 0    | [Welcome to the Course](https://huggingface.co/learn/agents-course/en/unit0/introduction)  | -        | -                                                                             | -                                        | -                                                                                                                                                                                           |
+| 2025/2/17~2/23 | 1    | [Introduction to Agents](https://huggingface.co/learn/agents-course/en/unit1/introduction) | -        | [Unit 1 Quiz](https://huggingface.co/learn/agents-course/en/unit1/final-quiz) | [First Agent](spaces/Unit_1-First_Agent) | [Unit 1 Notebook](notebooks/Unit_1-Introduction_to_Agents.ipynb), [Try Dummy Agent and `smolagents`](https://colab.research.google.com/drive/1SzN6jyQpldIXF-eNPP1_vnKv4ivLJRG7?usp=sharing) |
+| 2025/2/24~3/9  | 2    | [2_frameworks](units/en/unit2/README.md)                                                   | -        | -                                                                             | -                                        | -                                                                                                                                                                                           |
+| 2025/3/10~3/31 | 3    | [3_use_cases](units/en/unit3/README.md)                                                    | -        | -                                                                             | -                                        | -                                                                                                                                                                                           |
+| 2025/4/1~4/30  | 4    | [4_final_assignment_with_benchmark](units/en/unit4/README.md)                              | -        | -                                                                             | -                                        | -                                                                                                                                                                                           |
 
 ### Unit 0. Welcome to the Course
 
@@ -144,12 +144,13 @@ cp .env.example .env
    - [dummy_agent_library.ipynb · agents-course/notebooks at main](https://huggingface.co/agents-course/notebooks/blob/main/dummy_agent_library.ipynb) ([open in Google Colab](https://colab.research.google.com/#fileId=https://huggingface.co/agents-course/notebooks/blob/main/dummy_agent_library.ipynb)) => [Modified Version](https://colab.research.google.com/drive/1SzN6jyQpldIXF-eNPP1_vnKv4ivLJRG7?usp=sharing)
    - The `chat` method is the RECOMMENDED method to use in order to ensure a smooth transition between models
    - If use `text_generation` method, we need to provide prompt (e.g. special tokens for the specific model) properly
-13. [ ] [Let’s Create Our First Agent Using smolagents](https://huggingface.co/learn/agents-course/en/unit1/tutorial)
+13. [ ] [Let’s Create Our First Agent Using smolagents](https://huggingface.co/learn/agents-course/en/unit1/tutorial) (TODO: failed to use course HfApiModel API endpoint)
     - smolagents is a library that focuses on codeAgent, a kind of agent that performs “Actions” through code blocks, and then “Observes” results by executing the code.
     - [Introducing smolagents: simple agents that write actions in code.](https://huggingface.co/blog/smolagents)
     - [Agent process - YouTube](https://www.youtube.com/watch?v=PQDKcWiuln4)
     - Duplicate this space: [First Agent Template - a Hugging Face Space by agents-course](https://huggingface.co/spaces/agents-course/First_agent_template)
       - Modify this incomplete code: [app.py · agents-course/First_agent_template at main](https://huggingface.co/spaces/agents-course/First_agent_template/blob/main/app.py)
+      - [First Agent Template - a Hugging Face Space by daviddwlee84](https://huggingface.co/spaces/daviddwlee84/First_Agent)
 14. [ ] [**Unit 1 Quiz**](https://huggingface.co/learn/agents-course/en/unit1/final-quiz)
 15. [ ] [Get your certificate](https://huggingface.co/learn/agents-course/en/unit1/get-your-certificate)
 16. [ ] [Conclusion](https://huggingface.co/learn/agents-course/en/unit1/conclusion)
