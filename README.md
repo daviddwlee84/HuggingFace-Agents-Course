@@ -47,14 +47,14 @@ cp .env.example .env
 
 [![publishing-date](https://huggingface.co/datasets/agents-course/course-images/resolve/main/en/communication/next-units.jpg)](https://huggingface.co/learn/agents-course/en/communication/next-units)
 
-| Week           | Unit  | Topic                                                                                      | Lectures                                                                                                                  | Quiz                                                                          | Assignments                              | Others                                                                                                                                                                                      |
-| -------------- | ----- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| -              | 0     | [Welcome to the Course](https://huggingface.co/learn/agents-course/en/unit0/introduction)  | [Welcome To The Agents Course! Introduction to the Course and Q&A - YouTube](https://www.youtube.com/watch?v=iLVyYDbdSmM) | -                                                                             | -                                        | -                                                                                                                                                                                           |
-| 2025/2/10~2/16 | 1     | [Introduction to Agents](https://huggingface.co/learn/agents-course/en/unit1/introduction) | -                                                                                                                         | [Unit 1 Quiz](https://huggingface.co/learn/agents-course/en/unit1/final-quiz) | [First Agent](spaces/Unit_1-First_Agent) | [Unit 1 Notebook](notebooks/Unit_1-Introduction_to_Agents.ipynb), [Try Dummy Agent and `smolagents`](https://colab.research.google.com/drive/1SzN6jyQpldIXF-eNPP1_vnKv4ivLJRG7?usp=sharing) |
-| 2025/2/17~2/23 | Bonus | Fine-tune your agent                                                                       | -                                                                                                                         | -                                                                             | -                                        | -                                                                                                                                                                                           |
-| 2025/2/24~3/9  | 2     | [2_frameworks](units/en/unit2/README.md)                                                   | -                                                                                                                         | -                                                                             | -                                        | -                                                                                                                                                                                           |
-| 2025/3/10~3/31 | 3     | [3_use_cases](units/en/unit3/README.md)                                                    | -                                                                                                                         | -                                                                             | -                                        | -                                                                                                                                                                                           |
-| 2025/4/1~4/30  | 4     | [4_final_assignment_with_benchmark](units/en/unit4/README.md)                              | -                                                                                                                         | -                                                                             | -                                        | -                                                                                                                                                                                           |
+| Week           | Unit  | Topic                                                                                          | Lectures                                                                                                                  | Quiz                                                                          | Assignments                              | Others                                                                                                                                                                                      |
+| -------------- | ----- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -              | 0     | [Welcome to the Course](https://huggingface.co/learn/agents-course/en/unit0/introduction)      | [Welcome To The Agents Course! Introduction to the Course and Q&A - YouTube](https://www.youtube.com/watch?v=iLVyYDbdSmM) | -                                                                             | -                                        | -                                                                                                                                                                                           |
+| 2025/2/10~2/16 | 1     | [Introduction to Agents](https://huggingface.co/learn/agents-course/en/unit1/introduction)     | -                                                                                                                         | [Unit 1 Quiz](https://huggingface.co/learn/agents-course/en/unit1/final-quiz) | [First Agent](spaces/Unit_1-First_Agent) | [Unit 1 Notebook](notebooks/Unit_1-Introduction_to_Agents.ipynb), [Try Dummy Agent and `smolagents`](https://colab.research.google.com/drive/1SzN6jyQpldIXF-eNPP1_vnKv4ivLJRG7?usp=sharing) |
+| 2025/2/17~2/23 | Bonus | [Fine-tune your agent](https://huggingface.co/learn/agents-course/en/bonus-unit1/introduction) | -                                                                                                                         | -                                                                             | -                                        | -                                                                                                                                                                                           |
+| 2025/2/24~3/9  | 2     | [Frameworks for AI Agents](https://huggingface.co/learn/agents-course/en/unit2/introduction)   | -                                                                                                                         | -                                                                             | -                                        | -                                                                                                                                                                                           |
+| 2025/3/10~3/31 | 3     | [3_use_cases](units/en/unit3/README.md)                                                        | -                                                                                                                         | -                                                                             | -                                        | -                                                                                                                                                                                           |
+| 2025/4/1~4/30  | 4     | [4_final_assignment_with_benchmark](units/en/unit4/README.md)                                  | -                                                                                                                         | -                                                                             | -                                        | -                                                                                                                                                                                           |
 
 ### Unit 0. Welcome to the Course
 
@@ -161,7 +161,7 @@ cp .env.example .env
 
 [![unit1-certificate](images/unit1-certificate.webp)](https://huggingface.co/datasets/agents-course/certificates/resolve/main/certificates/daviddwlee84/2025-02-12.png)
 
-### Bonus Unit. Fine-tune your agent 
+### Bonus Unit. Fine-Tuning An LLM For Function-Calling
 
 > Fine-tune a Agent to do function calling (aka to be able to call tools based on user prompt)
 
@@ -176,9 +176,40 @@ cp .env.example .env
    - [bonus-unit1/bonus-unit1.ipynb · agents-course/notebooks at main](https://huggingface.co/agents-course/notebooks/blob/main/bonus-unit1/bonus-unit1.ipynb)
 4. [ ] [Conclusion](https://huggingface.co/learn/agents-course/bonus-unit1/conclusion)
 
-### Unit 2.
+### Unit 2. Frameworks for AI Agents
 
 > Overview of smolagents, LangChain, LangGraph, and LlamaIndex.
+
+1. [ ] [Introduction to Agentic Frameworks - Hugging Face Agents Course](https://huggingface.co/learn/agents-course/en/unit2/introduction)
+
+#### Unit 2.1 smolagents
+
+1. [ ] [Introduction to smolagents](https://huggingface.co/learn/agents-course/en/unit2/smolagents/introduction)
+2. [ ] [Why use smolagents](https://huggingface.co/learn/agents-course/en/unit2/smolagents/why_use_smolagents)
+3. [ ] [Small Quiz (ungraded)](https://huggingface.co/learn/agents-course/en/unit2/smolagents/quiz1)
+4. [ ] [Building Agents That Use Code](https://huggingface.co/learn/agents-course/en/unit2/smolagents/code_agents)
+5. [ ] [Writing actions as code snippets or JSON blobs](https://huggingface.co/learn/agents-course/en/unit2/smolagents/tool_calling_agents)
+6. [ ] [Tools](https://huggingface.co/learn/agents-course/en/unit2/smolagents/tools)
+7. [ ] [Building Agentic RAG Systems](https://huggingface.co/learn/agents-course/en/unit2/smolagents/retrieval_agents)
+8. [ ] [Small Quiz (ungraded)](https://huggingface.co/learn/agents-course/en/unit2/smolagents/quiz2)
+9. [ ] [Multi-Agent Systems](https://huggingface.co/learn/agents-course/en/unit2/smolagents/multi_agent_systems)
+10. [ ] [Vision Agents with smolagents](https://huggingface.co/learn/agents-course/en/unit2/smolagents/vision_agents)
+11. [ ] [Exam Time!](https://huggingface.co/learn/agents-course/en/unit2/smolagents/final_quiz)
+12. [ ] [Conclusion](https://huggingface.co/learn/agents-course/en/unit2/smolagents/conclusion)
+
+#### Unit 2.2 LlamaIndex
+
+1. [ ] [Introduction to LlamaIndex](https://huggingface.co/learn/agents-course/en/unit2/llama-index/introduction)
+2. [ ] [Introduction to the LlamaHub](https://huggingface.co/learn/agents-course/en/unit2/llama-index/llama-hub)
+3. [ ] [What are components in LlamaIndex?](https://huggingface.co/learn/agents-course/en/unit2/llama-index/components)
+4. [ ] [Using Tools in LlamaIndex](https://huggingface.co/learn/agents-course/en/unit2/llama-index/tools)
+5. [ ] [Small Quiz (ungraded)](https://huggingface.co/learn/agents-course/en/unit2/llama-index/quiz1)
+6. [ ] [Using Agents in LlamaIndex](https://huggingface.co/learn/agents-course/en/unit2/llama-index/agents)
+7. [ ] [Creating agentic workflows in LlamaIndex](https://huggingface.co/learn/agents-course/en/unit2/llama-index/workflows)
+8. [ ] [Quick Self-Check (ungraded)](https://huggingface.co/learn/agents-course/en/unit2/llama-index/quiz2)
+9. [ ] [Conclusion](https://huggingface.co/learn/agents-course/en/unit2/llama-index/conclusion)
+
+#### Unit 2.3 LangGraph
 
 ### Unit 3.
 
@@ -210,3 +241,12 @@ Courses
 
 - [Hugging Face - Learn](https://huggingface.co/learn)
   - [Hugging Face NLP Course](https://huggingface.co/learn/nlp-course)
+
+Article
+
+- [**Model Is The Product**](https://pleias.fr/blog/blogthe-model-is-the-product)
+- [Norah Sakal | AI Agents That Work](https://norahsakal.com/)
+  - [What is Model Context Protocol (MCP)? How it simplifies AI integrations compared to APIs | AI Agents That Work](https://norahsakal.com/blog/mcp-vs-api-model-context-protocol-explained/)
+- [Model memory estimator](https://huggingface.co/docs/accelerate/usage_guides/model_size_estimator)
+  - [Model Memory Utility - a Hugging Face Space by hf-accelerate](https://huggingface.co/spaces/hf-accelerate/model-memory-usage)
+- [Transformer Math 101 | EleutherAI Blog](https://blog.eleuther.ai/transformer-math/)
